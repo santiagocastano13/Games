@@ -1,0 +1,160 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header{
+
+    background-image: url('../img/destacada.jpg');
+    background-size: cover;
+    height: 50vh;
+    width: 100%;
+    box-shadow: 0 0 15px 15px #000;
+    font-size: 40px;
+    color: #f3f2f2;
+}
+
+header h1{
+    background: rgba(0, 0, 0, 0.6);
+    height: 50.9vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 10px 10px 10px #585757;
+    transition: color 1s, transform 1s, background 1s;
+}
+h1:hover{
+    color: #030303;
+    transform: translateY(-5px);
+    transition: .9s;
+    text-shadow: 10px 10px 10px #fff;
+    background: rgba(228, 211, 211, 0.2);
+}
+
+button{
+    margin: 25px 5px;
+    float: right;
+    padding: 10px;
+    color: #fff;
+    background-color: #000;
+    border: none;
+}
+
+button:hover{
+    background-color: #b1b1b1;
+    color: #000;
+    cursor: pointer;
+}
+
+.container{
+    width: 100%;
+    padding: 2rem 1rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+.card {
+    position: relative;
+    width: 25rem;
+    height: 30rem;
+    margin: 3rem 1rem;
+}
+
+.face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: 2.5s;
+}
+
+.front {
+    transform: perspective(600px) rotateY(0deg);
+    box-shadow: 0 5px 10px #000;
+}
+
+.front img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.front h3 {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 3rem;
+    line-height: 3rem;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.8);
+    text-align: center;
+}
+
+.back {
+    transform: perspective(600px) rotateY(180deg);
+    background: rgb(255, 255, 255);
+    padding: 1rem;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    box-shadow: 0 5px 10px #000;
+}
+.back p{
+    font-size: 12px;
+    text-align: justify;
+    letter-spacing: 1px;
+}
+
+.link {
+    border-top: solid 1px #313131;
+    height: 50px;
+    line-height: 50px;
+}
+
+.card a {
+    padding: 10px;
+    background-color: #000;
+    color: #fd0c0c;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+.card a:hover {
+    background-color: #fd0c0c;
+    color: #000;
+}
+
+.back h3 {
+    font-size: 30px;
+    margin-top: 20px;
+    letter-spacing: 2px;
+}
+
+
+.card:hover .front {
+    transform: perspective(600px) rotateY(180deg);
+}
+
+.card:hover .back {
+    transform: perspective(600px) rotateY(360deg);
+}
+
+footer{
+    width: 100%;
+    height: 3rem;
+    box-shadow: 5px 0 10px 5px #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+}
